@@ -60,12 +60,6 @@ with codecs.open("README.md", "r", encoding='utf-8') as desc_file:
     long_description = desc_file.read()
 
 
-#: Holds the requirements for colorful
-requirements = [
-    'colorama;platform_system=="Windows"'
-]
-
-
 if __name__ == '__main__':
 
     setup(
@@ -82,7 +76,6 @@ if __name__ == '__main__':
         include_package_data=True,
         package_data={'': ['colorful/data/*.txt', 'colorful/data/*.json', 'README.md']},
         packages=find_packages(exclude=['*tests*']),
-        install_requires=requirements,
         classifiers=[
             'Development Status :: 5 - Production/Stable',
             'Environment :: Console',
